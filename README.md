@@ -9,7 +9,7 @@ Uses [lego](https://go-acme.github.io/lego/) and the [ACME DNS-01 challenge](htt
 To **install** or **update** synology-letsencrypt, run the [install script](install.sh). To do that, either download and run the script manually, or use the following cURL command:
 
 ```sh
-curl -sSL https://raw.githubusercontent.com/JessThrysoee/synology-letsencrypt/master/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/pacidic/synology-letsencrypt/master/install.sh | bash
 ```
 
 The script has to be run as root. To run it as root, you can SSH into your NAS with an admin user and then issue `sudo -i` to become root (the password is the same as the admin user's).
@@ -76,5 +76,5 @@ $ /usr/local/bin/synology-letsencrypt.sh -c
 To **uninstall** synology-letsencrypt, run the [uninstall script](uninstall.sh). To do that, either download and run the script manually, or use the following cURL command:
 
 ```sh
-curl -sSL https://raw.githubusercontent.com/JessThrysoee/synology-letsencrypt/master/uninstall.sh | bash
+curl -sSL https://raw.githubusercontent.com/pacidic/synology-letsencrypt/master/uninstall.sh | bash
 ```

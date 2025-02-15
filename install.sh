@@ -26,31 +26,14 @@ permissions() {
 }
 
 install_lego() {
-    local path="/usr/local/bin/lego"
-    local url
-    
-    url="$(
-        curl -sSL "https://api.github.com/repos/go-acme/lego/releases/latest" \
-        | jq --unbuffered -r --arg arch "$ARCH" '.assets[].browser_download_url | select(.|endswith("linux_\($arch).tar.gz"))'
-    )"
-
-    if [[ -z $url ]]; then
-        echo "Could not find lego download URL for architecture '$ARCH'! Try a different architecture maybe? See '$0 -h'" >&2
-        exit 1
-    fi
-
-    curl -sSL "$url" \
-        | sudo tar -zx -C "${path%/*}" -- "${path##*/}"
-
-    permissions 755 "$path"
-    printf "installed: %s\n" "$path"
+  :
 }
 
 install_script() {
     local name="$1"
     local path="/usr/local/bin/$name"
 
-    sudo curl -sSL -o "$path" "https://raw.githubusercontent.com/JessThrysoee/synology-letsencrypt/master/$name"
+    sudo curl -sSL -o "$path" "https://raw.githubusercontent.com/pacidic/synology-letsencrypt/master/$name"
 
     permissions 755 "$path"
     printf "installed: %s\n" "$path"

@@ -27,7 +27,7 @@ uninstall_cert_message() {
 }
 
 uninstall() {
-    uninstall_script "lego"
+    # uninstall_script "lego"
     uninstall_script "synology-letsencrypt.sh"
     uninstall_script "synology-letsencrypt-reload-services.sh"
     uninstall_script "synology-letsencrypt-make-cert-id.sh"
